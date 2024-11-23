@@ -1,0 +1,277 @@
+---
+title: "DASC 6000: Written Assignment 02"
+author: "Robert Johnson"
+date: today
+format:
+  html:
+    embed-resources: true
+    toc: true
+    toc-depth: 2
+    toc-expand: 2
+    toc-title: Contents
+    toc-location: right
+    number-sections: true
+    number-depth: 2
+    html-math-method: katex
+  # tufte::tufte_html: default
+# bibliography: dasc-6000.bib 
+# csl: ieee-with-url.csl
+# linkcolor: red
+# urlcolor: blue
+# link-citations: yes
+---
+
+# Assignment Goal {.unnumbered}
+
+The overarching goal for this assignment is to assess your understanding of sample spaces and probability.
+
+# De Morgan’s Laws
+
+Consider rolling a six-sided die. Let $\mathbb{A}$ be the set of outcomes where the roll is an even number. Let $\mathbb{B}$ be the set of outcomes where the roll is greater than 3. Calculate and compare the sets on both sides of the following De Morgan’s laws:
+
+  Let $$
+
+1. $(\mathbb{A} \cup \mathbb{B})^c=\mathbb{A}^c \cap \mathbb{B}^c$ 
+    
+    Your answer goes here.
+    
+1. $(\mathbb{A} \cap \mathbb{B})^c = \mathbb{A}^c \cup \mathbb{B}^c$
+    
+    Your answer goes here.
+    
+    
+# Set Identities
+
+Let $\mathbb{A}$ and $\mathbb{B}$ be two sets. Show that:
+    
+1. $\mathbb{A}^c=\left(\mathbb{A}^c \cap \mathbb{B}\right) \cup\left(\mathbb{A}^c \cap \mathbb{B}^c\right)$
+    
+    Your answer goes here.
+    
+1. $\mathbb{B}^c=\left(\mathbb{A} \cap \mathbb{B}^c\right) \cup\left(\mathbb{A}^c \cap \mathbb{B}^c\right)$
+    
+    Your answer goes here.
+    
+1. $(\mathbb{A} \cap \mathbb{B})^c=\left(\mathbb{A}^c \cap \mathbb{B}\right) \cup\left(\mathbb{A}^c \cap \mathbb{B}^c\right) \cup\left(\mathbb{A} \cap \mathbb{B}^c\right)$
+    
+    Your answer goes here.
+    
+1. Consider rolling a fair six-sided die. Let $\mathbb{A}$ be the set of outcomes where the roll is an odd number. Let $\mathbb{B}$ be the set of outcomes where the roll is less than 4. Calculate the sets on both sides of the equality in part (3), and verify that the equality holds.
+    
+    Your answer goes here.
+    
+
+# Principle of Inclusion and Exclusion
+
+Out of the students in a class, $60 \%$ are geniuses, $70 \%$ love chocolate, and $40 \%$ fall into both categories. Determine the probability that a randomly selected student is neither a genius nor a chocolate lover.
+    
+    Your answer goes here.
+    
+# Constructing a Probabilistic Model
+
+A six-sided die is loaded in a way that each even face is twice as likely as each odd face. All even faces are equally likely, as are all odd faces. Construct a probabilistic model for a single roll of this die and find the probability that the outcome is less than 4.
+
+Your answer goes here.
+
+# Sample Space
+
+A four-sided die is rolled repeatedly, until the first time (if ever) that an even number is obtained. What is the **sample space** for this experiment?
+    
+    Your answer goes here.
+    
+# Sample Space Partitioning
+
+A partition of the sample space $\Omega$ is a collection of disjoint events $S_1, \ldots, S_n$ such that $\Omega=\cup_{i=1}^n S_i$
+    
+1. Show that for any event $\mathbb{A}$, we have $\mathbf{P}(\mathbb{A})=\sum_{i=1}^n \mathbf{P}\left(\mathbb{A} \cap S_i\right)$
+    
+    Your answer goes here.
+    
+1. Use part (a) to show that for any events $A, B$, and $C$ we have
+    $$
+    \mathbf{P}(\mathbb{A})=\mathbf{P}(\mathbb{A} \cap \mathbb{B})+\mathbf{P}(\mathbb{A} \cap \mathbb{C})+\mathbf{P}\left(\mathbb{A} \cap \mathbb{B}^c \cap \mathbb{C}^c\right)-\mathbf{P}(\mathbb{A} \cap \mathbb{B} \cap \mathbb{C})
+    $$
+    
+    Your answer goes here.
+    
+    
+# Six-sided Dice
+
+We roll two fair six-sided dice. Each one of the 36 possible outcomes
+is assumed to be equally likely.
+
+1. Find the probability that doubles are rolled.
+    
+    Your answer goes here.
+   
+1. Given that the roll results in a sum of 4 or less, find the conditional
+probability that doubles are rolled.
+    
+    Your answer goes here.
+   
+1. Find the probability that at least one die roll is a 6.
+    
+    Your answer goes here.
+   
+1. Given that the two dice land on different numbers, find the
+conditional probability that at least one die roll is a 6.
+    
+    Your answer goes here.
+    
+# Fair and Unfair Coins
+
+A coin is tossed twice. Alice claims that the event of two heads is at least as likely if we know that the first toss is a head than if we know that at least one of the tosses is a head. Is she right? Does it make a difference if the coin is fair or unfair? How can we generalize Alice’s reasoning?
+
+Your answer goes here.
+
+# Biased Coins 
+
+We are given three coins: one has heads in both faces, the second has tails in both faces, and the third has a head in one face and a tail in the other. We choose a coin at random, toss it, and the result is heads. What is the probability that the opposite face is tails?
+
+Your answer goes here.
+
+# Quality Assurance 
+
+A batch of one hundred items is inspected by testing four randomly selected items. If one of the four is defective, the batch is rejected. What is the probability that the batch is accepted if it contains five defectives?
+
+Your answer goes here.
+
+# Q: 
+
+Alice searches for her term paper in her filing cabinet, which has several drawers. She knows that she left her term paper in drawer $j$ with probability $\mathbf{P}_j>O$. The drawers are so messy that even if she correctly guesses that the term paper is in drawer $i$, the probability that she finds it is only $d_i$.
+    
+Alice searches in a particular drawer, say drawer $i$, but the search is unsuccessful. Conditioned on this event, show that the probability that her paper is in drawer $j$, is given by
+$$
+\begin{aligned}
+\frac{p_j}{1-p_i d_i} &, \quad \text { if } j \neq i \\
+\\
+\frac{p_i\left(1-d_i\right)}{1-p_i d_i}&, \quad \text { if } j=i
+\end{aligned}
+$$
+Your answer goes here.
+
+
+# Jars and Balls
+
+Each of $k$ jars contains $m$ white and $n$ black balls. A ball is randomly chosen from jar 1 and transferred to jar 2, then a ball is randomly chosen from jar 2 and transferred to jar 3, etc. Finally, a ball is randomly chosen from jar $k$. Show that the probability that the last ball is white is the same as the probability that the first ball is white, i.e., it is $m /(m+n)$.
+
+Your answer goes here.
+
+# Jars and Balls
+
+We have two jars, each initially containing an equal number of balls. We perform four successive ball exchanges. In each exchange, we pick simultaneously and at random a ball from each jar and move it to the other jar. What is the probability that at the end of the four exchanges all the balls will be in the jar where they started?
+
+
+Your answer goes here.
+
+# Coin Tossing
+
+Alice and Bob have $2 n+1$ coins, each coin with probability of heads equal to $\frac{1}{2}$. Bob tosses $n+1$ coins, while Alice tosses the remaining $n$ coins. Assuming independent coin tosses, show that the probability that after all coins have been tossed, Bob will have gotten more heads than Alice is $\frac{1}{2}$.
+
+Your answer goes here.
+
+# Message Transmission Over a Communications Channel
+
+A source transmits a message (a string of symbols) through a noisy communication channel. Each symbol is 0 or 1 with probability $p$ and $1-p$, respectively, and is received incorrectly probability $\epsilon_0$ and $\epsilon_1$, respectively (see the figure below). Errors in different symbol transactions are independent.
+
+![A communications channel](communication-channel.png)
+
+1. What is the probability that $k$ th symbol is received correctly?
+    
+    Your answer goes here.
+    
+1. What is the probability that the string of 1011 is received correctly?
+    
+    Your answer goes here.
+    
+1. In an effort to improve reliability, each symbol is transmitted three time and received string is decoded by majority rule. In other words a 0 (or 1 ) is transmitted as 000 (or 111, respectively), and it is decoded at the receiver as a 0 (or 1) if and only if the received three-symbol string contains at least two 0s (or 1s, respectively). What is the probability that a 0 is correctly decoded?
+    
+    Your answer goes here.
+    
+1. For what values of $\epsilon_0$ is there an improvement in the probability of correct decoding of a 0 when the scheme of part (c) is used?
+    
+    Your answer goes here.
+    
+1. Suppose that the scheme of part $(c)$ is used. What is the probability that a symbol was 0 given that the received string is 101?
+    
+    Your answer goes here.
+     
+    
+# King's Siblings
+
+The king has only one sibling. What is the probability that the sibling is male? Assume that every birth results in a boy with probability $\frac{1}{2}$ independent of other births. Be careful to state any additional assumptions you have to make in order to arrive at an answer.
+
+Your answer goes here.
+
+# Fair and Biased Coins
+
+Alice and Bob want to choose between the opera and the movies by tossing a fair coin. Unfortunately, the only available coin is biased (though the bias is not known exactly). How can they use the biased coin to make a decision so that either option (opera or the movies) is equally likely to be chosen?
+
+Your answer goes here.
+
+# Probability of a System Outage
+
+A cellular phone system services a population of $n_1$ voice users (those who occasionally need a voice connection) and $n_2$ data users (those who occasionally need a data connection). We estimate that at a given time, each user will need to be connected to the system with probability $p_1$ (for voice users) or $p_2$ (for data users), independent of other users. The data rate for a voice user is $r_1$ bits/sec and for a data user is $r_2$ bits/sec. The cellular system has a total capacity of $c$ bits/sec. What is the probability that more users want to use the system than the system can accommodate?
+
+Your answer goes here.
+
+# Coin Tossing
+
+Consider a coin that comes up heads with probability $p$ and tails with probability $1-p$. Let $q_n$ be the probability that after $n$ independent tosses, there have been an even number of heads. Derive a recursion that relates $q_n$ to $q_n-1$, and solve this recursion to establish the formula:
+$$
+q_n=\left(1+(1-2 p)^n\right) / 2
+$$
+Your answer goes here.
+
+# Probability of Events
+
+A six-sided die is rolled three times independently. Which is more likely: a sum of 11 or a sum of 12?
+
+Your answer goes here.
+
+# Birhday Problem
+
+Consider $n$ people who are attending a party. We assume that every person has an equal probability of being born on any day during the year, independent of everyone else, and ignore the additional complication presented by leap years (i.e., assume that nobody is born on February 29). What is the probability that each person has a distinct birthday?
+
+Your answer goes here.
+
+# Urn Model
+
+An urn contains $m$ red and $n$ white balls.
+
+1. We draw two balls randomly and simultaneously. Describe the sample space and calculate the probability that the selected balls are of different color, by using two approaches: a counting approach based on the discrete uniform law, and a sequential approach based on the multiplication rule.
+    
+    Your answer goes here.
+    
+1. We roll a fair 3-sided die whose faces are labeled 1, 2, 3, and if $k$ comes up, we remove $k$ balls from the urn at random and put them aside. Describe the sample space and calculate the probability that all of the balls drawn are red, using a divide-andconquer approach and the total probability theorem.
+    
+    Your answer goes here.
+    
+# Permutations and Combinations 
+
+An academic department offers 8 lower level courses: $\left\{L_1, L_2, \ldots, L_8\right\}$ and to higher level courses: $\left\{H_1, H_2, \ldots, H_{10}\right\}$. A valid curriculum consists of 4 lower level courses and 3 higher level courses.
+
+1.  How many different curricula are possible?
+    
+    Your answer goes here.
+    
+1. Suppose that $\left\{H_1, \ldots, H_5\right\}$ have $L_1$ as a prerequisite, and $\left\{H_6, \ldots H_{10}\right\}$ have $L_2$ and $L_3$ as prerequisites. i.e., any curricula which involve, say, one of $\left\{H_1, \ldots, H_5\right\}$ must also include $L_1$. How many different curricula are there?
+    
+    Your answer goes here.
+    
+# Computing Probability
+
+We draw the top 7 cards from a well-shuffled standard 52-card deck. Find the probability that:
+
+1. The 7 cards include exactly 3 aces.
+    
+    Your answer goes here.
+    
+1. The 7 cards include exactly 2 kings.
+    
+    Your answer goes here.
+    
+1. The probability that the 7 cards include exactly 3 aces or exactly 2 kings, or both.
+    
+    Your answer goes here.
+    
